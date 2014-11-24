@@ -34,7 +34,7 @@ edits1 <- function(word) {
 ## edits2 <- function(word) unique(unlist(lapply(edits1(word), edits1)))
 ## length(edits2('something')) ## 114324
 
-known <- function(words) { words[ words %in% names(words) ]
+known <- function(words) { words[ words %in% names(words) ] }
 
 known_edits2 <- function(word) known(unique(unlist(lapply(edits1(word), edits1))))
 
